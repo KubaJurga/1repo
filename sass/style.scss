@@ -1,0 +1,105 @@
+@use './reset' as *;
+@use './colors' as *;
+@use './width&height' as *;
+
+body {
+	min-height: 100vh;
+	background-color: $bgc-color;
+}
+
+.line {
+	height: 2px;
+}
+
+.home-bg-image {
+	height: 100vh;
+	background-image: url('../images/mens\ with\ alcohol.jpg');
+	background-position: center;
+	border-bottom-left-radius: 200px;
+}
+
+header {
+	padding: 0px 100px;
+	height: $header-height;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	letter-spacing: 1px;
+	font-weight: 600;
+
+	.title {
+		color: $text-colors;
+		font-size: 42px;
+		height: 50px;
+	}
+	nav {
+		height: 50px;
+		ul {
+			display: flex;
+			list-style: none;
+			li {
+				flex-direction: row;
+				margin: 0 20px;
+				a {
+					color: $text-colors;
+					font-size: 36px;
+				}
+			}
+		}
+	}
+}
+
+.main-container {
+	height: calc(100vh - $header-height);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h1 {
+		font-size: 90px;
+	}
+
+	a {
+		color: $text-colors;
+	}
+}
+
+.about-us {
+	height: 100vh;
+	background-image: linear-gradient(rgb(255, 255, 255), rgb(197, 201, 180));
+
+	.about-us-container {
+		height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.about-us-header-container {
+		h2 {
+			font-size: 80px;
+		}
+	}
+	.about-us-text-container {
+		align-items: flex-start;
+
+		.about-us-text-box {
+			height: 400px;
+			width: 400px;
+			margin: 0 80px;
+			font-size: 38px;
+			text-align: center;
+
+			.about-us-text {
+				line-height: 60px;
+				font-weight: 500;
+				border-top: 2px solid #000;
+			}
+		}
+	}
+}
+
+.news {
+	height: 100vh;
+	background-image: linear-gradient(rgb(197, 201, 180), rgb(172, 196, 175));
+}
